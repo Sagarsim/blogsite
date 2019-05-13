@@ -37,7 +37,7 @@ class Home extends React.Component {
         </div>
         <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
-            {articles.map( (article) => {
+            {articles.length > 0 ? articles.map( (article) => {
               return (
                 
                 <div className="card my-3" key={article._id}>
@@ -60,7 +60,7 @@ class Home extends React.Component {
                   </div>
                 </div>
               )
-            })}
+            }) : <h1 className="text-center">Loading Posts...</h1>}
           </div>
         </div>
       </div>
